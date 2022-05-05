@@ -1,0 +1,18 @@
+# excluded directories
+/build
+/Release
+/Debug
+/instances
+.vscode/
+/DPS.code-workspace
+/kissat/*/tmp
+
+# excluded files
+DPS
+depend.mk
+*.a
+*.o
+*.or
+*.od
+*.op
+*.old
