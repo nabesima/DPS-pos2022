@@ -1,0 +1,73 @@
+#content {
+    max-width: 1200px;
+}
+
+#content ol, #content ul {
+    line-height: 150%;
+}
+li {
+    margin-bottom: 10px;
+}
+.note .org-ul, .important .org-ul, .attention .org-ul, .caution .org-ul, blockquote .org-ul {
+    margin-bottom: 0px;
+}
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+blockquote {
+    font-style:    normal;
+}
+blockquote p {
+    margin-bottom: 0px;
+}
+.figure p {
+    margin-bottom: 0px;
+    font-size:     90%;
+    font-style:    normal;
+    line-height: 150%;
+}
+
+#postamble .date {
+    color: #f0f0f0;
+}
+
+table th {
+    color: #f0f0f0;
+    background: dimgray;
+}
+table thead th {
+    border-top: 1px solid #343131;
+    border-bottom: 1px solid #343131;
+}
+table tbody {
+    border-bottom: 1px solid #343131;
+}
+table td, table th {
+    border: 0px;
+}
+table tr:nth-child(2n-1) td {
+    background-color: #FFFFFF;
+}
+table tr:nth-child(2n) td {
+    background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.outline-2 h2 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #343131;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.outline-3 h3 {
+    padding-left: 10px;
+    border-left: 6px solid #343131;
+}

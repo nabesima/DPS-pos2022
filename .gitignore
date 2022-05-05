@@ -16,3 +16,5 @@ depend.mk
 *.od
 *.op
 *.old
+*.org
+*.setup
