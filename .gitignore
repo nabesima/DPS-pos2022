@@ -18,3 +18,4 @@ depend.mk
 *.old
 *.org
 *.setup
+*~
