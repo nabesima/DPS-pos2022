@@ -21,7 +21,7 @@ class Sharer {
     friend class AbstDetSeqSolver;
 
 public:
-    Sharer(uint32_t _num_threads, uint32_t _margin, uint64_t _mem_acc_lim);
+    Sharer(uint32_t _num_threads, uint32_t _margin, uint64_t _mem_acc_lim, bool _non_det);
     ~Sharer();
 
     uint32_t getNumThreads() const { return num_threads; }
@@ -46,6 +46,7 @@ protected:
     uint32_t num_threads;
     uint32_t margin;
     uint64_t mem_acc_lim;
+    bool     non_det;
 
     std::atomic<int> num_live_threads;
     std::atomic<bool> lanched;

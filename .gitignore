@@ -16,6 +16,7 @@ depend.mk
 *.od
 *.op
 *.old
+org-mac
 *.org
-*.setup
 *~
+org-macros.setup

@@ -8,10 +8,11 @@
 using namespace DPS;
 using namespace std;
 
-Sharer::Sharer(uint32_t _num_threads, uint32_t _margin, uint64_t _mem_acc_lim):
+Sharer::Sharer(uint32_t _num_threads, uint32_t _margin, uint64_t _mem_acc_lim, bool _non_det):
     num_threads(_num_threads)
 ,   margin(_margin)    
 ,   mem_acc_lim(_mem_acc_lim)
+,   non_det(_non_det)
 ,   num_live_threads(0)
 ,   lanched(false)
 ,   sol_found(false)
@@ -54,7 +55,7 @@ bool Sharer::shouldBeTerminated(uint64_t prd) {
     pthread_mutex_lock(&mutexJobFinished);  // TODO: read only mutex is available here.
     // modified by nabesima
     //shared_lock<shared_mutex> lock(mutexJobFinished);       // readers can access simultaneously
-    ret = sol_found && (final_result == UNKNOWN || winner_period + margin < prd);
+    ret = sol_found && (final_result == UNKNOWN || winner_period + margin < prd || non_det);
     pthread_mutex_unlock(&mutexJobFinished);
     return ret;
 }

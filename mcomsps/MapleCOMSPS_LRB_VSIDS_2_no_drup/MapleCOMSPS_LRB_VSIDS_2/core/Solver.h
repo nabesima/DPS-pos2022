@@ -234,7 +234,7 @@ protected:
             if (pick_strict) return activity[x] > activity[y]; 
             return activity[x] >= activity[y];
         }
-        VarOrderLt(const vec<double>&  act, const bool& at) : activity(act), pick_strict(at) { }
+        VarOrderLt(const vec<double>&  act, const bool& st) : activity(act), pick_strict(st) { }
     };
 
     // Solver state:

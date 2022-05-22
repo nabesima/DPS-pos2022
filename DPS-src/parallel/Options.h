@@ -26,6 +26,7 @@ private:
     uint32_t    num_threads;
     uint32_t    margin;
     uint64_t    mem_acc_lim;
+    bool        non_det;
     uint32_t    adjust_threads;
     uint32_t    fapp_clauses;
     uint32_t    fapp_periods;
@@ -92,6 +93,8 @@ public:
     uint32_t      getMargin()                 const { return margin; }
     void          setMemAccLim(uint64_t n)          { mem_acc_lim = n; }
     uint64_t      getMemAccLim()              const { return mem_acc_lim; }
+    void          setNonDetMode(bool b)             { non_det = b; }
+    uint64_t      getNonDetMode()             const { return non_det; }
     void          setAdjustThreads(uint32_t n)      { adjust_threads = n; }
     uint32_t      getAdjustThreads()          const { return adjust_threads; }
     void          setFAppClauses(uint32_t n)        { fapp_clauses = n; }

@@ -150,7 +150,7 @@ void DetParallelSolver::generateAllSolvers() {
     }
 
     // generates learnt clause exchanger
-    sharer = new Sharer(num_threads, options.getMargin(), options.getMemAccLim());
+    sharer = new Sharer(num_threads, options.getMargin(), options.getMemAccLim(), options.getNonDetMode());
     if (!sharer) throw std::runtime_error("could not allocate memory for Sharer");
     
     // generates sub-solvers

@@ -36,6 +36,7 @@ public:
 
     // Wait the addition of clauses to be completed.
     void waitAdditionCompleted(void);
+    bool isAdditionCompleted(void);
 
     // Methods for exportation
     int size(void) const { return clauses.size(); };

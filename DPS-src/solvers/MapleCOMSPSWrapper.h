@@ -21,7 +21,6 @@ public:
    SATResult solve();
    bool loadFormula(const Instance& clauses);
    void incExpClauseGen() { exp_clause_lbd_lim += 1.0 / exp_clause_lbd_lim; }
-   //void decExpClauseGen() { exp_clause_lbd_lim -= 1.0 / exp_clause_lbd_lim; exp_clause_lbd_lim = std::max(2.0, exp_clause_lbd_lim); }
    void decExpClauseGen() { exp_clause_lbd_lim -= 1.0; exp_clause_lbd_lim = std::max(2.0, exp_clause_lbd_lim); }
 
    void exportClause(MapleCOMSPS::vec<MapleCOMSPS::Lit>& cls, uint32_t lbd);

@@ -66,9 +66,11 @@ PrdClauses* PrdClausesQueue::get(int thread, uint64_t period) {
     if (period < p) return NULL;    // 'period' is already exported to 'thn'
 
     pthread_rwlock_rdlock(&rwlock);
-    assert(queue.size() > 0);
 
-    assert(queue.front()->period() <= p);
+    if (queue.size() == 0 || p < queue.front()->period())  {
+        pthread_rwlock_unlock(&rwlock);
+        return NULL;
+    }
 
     size_t index = p - queue.front()->period();
     assert(0 <= index);

@@ -44,6 +44,13 @@ void PrdClauses::waitAdditionCompleted(void) {
     pthread_mutex_unlock(&lock_completed);
 }
 
+bool PrdClauses::isAdditionCompleted(void) {
+    pthread_mutex_lock(&lock_completed);
+    int ret = completed;
+    pthread_mutex_unlock(&lock_completed);
+    return ret;
+}
+
 // When exporting to the specified thread is finished, then this method is called.
 void PrdClauses::completeExportation(int thread_id) {
     pthread_mutex_lock(&lock_num_exported_threads);

@@ -42,11 +42,7 @@ AbstDetSeqSolver* SolverFactory::createSATSolver(std::string name, Sharer *share
    else if (name == "mcomsps")
       solver = new MapleCOMSPSWrapper(id, sharer, options);
    else if (name == "kissat")
-      solver = new KissatWrapper(id, sharer, options
-            // dps->getMargin(), dps->getMemAccLim(), 
-            // dps->getFAppClauses(), dps->getFAppPeriods(), dps->getExpLitsLim(), dps->getExpLitsMargin(),
-            // dps->getKSLBDLim(), dps->getKSStable()
-         );
+      solver = new KissatWrapper(id, sharer, options);
    else 
       throw std::runtime_error("Error: unknown solver name'" + name + "'");
 

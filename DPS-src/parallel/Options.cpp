@@ -35,6 +35,7 @@ cxxopts::Options Options::makeDefaultOptions() {
         ("n,nthreads",     "number of threads (0 for automatic)",                cxxopts::value<uint32_t>()->default_value("0"),       "N")
         ("m,margin",       "margin for delayed clause exchange",                 cxxopts::value<uint32_t>()->default_value("20"),      "N")
         ("p,period",       "# of memory accesses for a period",                  cxxopts::value<uint64_t>()->default_value("1000000"), "N")
+        ("non-det",        "non-deterministic mode",                             cxxopts::value<bool>()->default_value("false"))
         ("adjust-threads", "adjust # of threads to avoid consuming all memory s.t. init memory size * N * # of threads <= mem-lim (0 as no-adjust)",
                                                                    cxxopts::value<uint32_t>()->default_value("3"), "N")
         ("fapp-clauses",   "imported clauses limit for forced application (0 for unlimited)", 
@@ -126,6 +127,7 @@ void Options::setOptions(int argc, const char* const argv[]) {
     setNumThreads   (result["nthreads"       ].as<uint32_t>());
     setMargin       (result["margin"         ].as<uint32_t>());
     setMemAccLim    (result["period"         ].as<uint64_t>());
+    setNonDetMode   (result["non-det"        ].as<bool>());
     setBaseSolver   (result["solver"         ].as<string>());
     setAdjustThreads(result["adjust-threads" ].as<uint32_t>());
     setFAppClauses  (result["fapp-clauses"   ].as<uint32_t>());
@@ -157,6 +159,7 @@ void Options::printOptions() {
     cout << "c  num threads      = " << num_threads << endl;
     cout << "c  margin           = " << margin << endl;
     cout << "c  period           = " << mem_acc_lim << endl;
+    cout << "c  non det          = " << non_det << endl;
     cout << "c  adjust threads   = " << adjust_threads << endl;
     cout << "c  fapp clauses     = " << fapp_clauses << endl;
     cout << "c  fapp periods     = " << fapp_periods << endl;

@@ -138,9 +138,15 @@ bool AbstDetSeqSolver::importClauses() {
         while ((p = queue.get(thn, periods - margin)) != NULL) {
             PrdClauses& prdClauses = *p;
 
-            parchrono.start(WaitingTime);
-            prdClauses.waitAdditionCompleted();
-            parchrono.stop(WaitingTime);
+            if (options.getNonDetMode()) {
+                if (!prdClauses.isAdditionCompleted())
+                    break;
+            }
+            else {
+                parchrono.start(WaitingTime);
+                prdClauses.waitAdditionCompleted();
+                parchrono.stop(WaitingTime);
+            }
 
             for (int j=0; j < prdClauses.size(); j++) {
                 const Clause& c = prdClauses[j];
