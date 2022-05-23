@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-20 金 12:56 -->
+<!-- 2022-05-22 日 22:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>DPS: A Framework for Deterministic Parallel SAT Solvers</title>
@@ -24,16 +24,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga2ec340"># of Solved Instances</a></li>
-<li><a href="#orgea2682e">CDF Plots</a>
+<li><a href="#org1cdf618"># of Solved Instances</a></li>
+<li><a href="#org6f60a57">CDF Plots</a>
 <ul>
-<li><a href="#org3bf5320">Runtime (Fig.3)</a></li>
-<li><a href="#org5e673a5">Waiting time ratio (Fig.4)</a></li>
-<li><a href="#org6731155">Propagation speed</a></li>
+<li><a href="#orgc9289ec">Runtime (Fig.3)</a></li>
+<li><a href="#org617f561">Waiting time ratio (Fig.4)</a></li>
+<li><a href="#orga9769e2">Propagation speed</a></li>
 </ul>
 </li>
-<li><a href="#orga5e39d2">Comparison of two solvers</a></li>
-<li><a href="#org24cd6c4">Comparison of best and worst cases</a></li>
+<li><a href="#orgb934976">Comparison of two solvers</a></li>
+<li><a href="#orgd8689fb">Comparison of best and worst cases</a></li>
 </ul>
 </div>
 </div>
@@ -46,9 +46,9 @@ Hidetomo Nabeshima, Tsubasa Fukiage, Yuto Obitsu, Xiao-Nan LU and Katsumi Inoue:
 </p>
 </blockquote>
 
-<div id="outline-container-orga2ec340" class="outline-2">
-<h2 id="orga2ec340"># of Solved Instances</h2>
-<div class="outline-text-2" id="text-orga2ec340">
+<div id="outline-container-org1cdf618" class="outline-2">
+<h2 id="org1cdf618"># of Solved Instances</h2>
+<div class="outline-text-2" id="text-org1cdf618">
 <p>
 The following results correspond to Table 1 in the paper, with some additional results.
 </p>
@@ -121,7 +121,7 @@ The following results correspond to Table 1 in the paper, with some additional r
 <td class="org-left">P-MCOMSPS</td>
 <td class="org-left">152 + 105</td>
 <td class="org-left">115 + 123</td>
-<td class="org-left">131 + 168</td>
+<td class="org-left">131 + <b>168</b></td>
 <td class="org-left">794 (398 + 396)</td>
 <td class="org-right">4697998</td>
 </tr>
@@ -133,6 +133,90 @@ The following results correspond to Table 1 in the paper, with some additional r
 <td class="org-left">134 + 167</td>
 <td class="org-left">794 (396 + 398)</td>
 <td class="org-right">4707163</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">DPS-MiniSAT-non-det</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">DPS-Glucose-non-det</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">160 + 105</td>
+<td class="org-left">135 + 123</td>
+<td class="org-left">139 + <b>168</b></td>
+<td class="org-left">830 (434 + 396)</td>
+<td class="org-right">4386010</td>
+</tr>
+
+<tr>
+<td class="org-left">DPS-MCOMSPS-non-det</td>
+<td class="org-left">159 + 104</td>
+<td class="org-left">140 + 121</td>
+<td class="org-left">137 + <b>168</b></td>
+<td class="org-left">829 (436 + 393)</td>
+<td class="org-right">4352294</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">163 + 105</td>
+<td class="org-left">126 + 122</td>
+<td class="org-left">138 + 167</td>
+<td class="org-left">821 (427 + 394)</td>
+<td class="org-right">4451212</td>
 </tr>
 </tbody>
 <tbody>
@@ -225,7 +309,7 @@ The following results correspond to Table 1 in the paper, with some additional r
 <td class="org-left">&#xa0;</td>
 <td class="org-left">168 + 112</td>
 <td class="org-left">170 + 130</td>
-<td class="org-left">157 + 167</td>
+<td class="org-left"><b>157</b> + 167</td>
 <td class="org-left">904 (495 + 409)</td>
 <td class="org-right">3451073</td>
 </tr>
@@ -234,7 +318,7 @@ The following results correspond to Table 1 in the paper, with some additional r
 <td class="org-left">DPS-Kissat</td>
 <td class="org-left">168 + 112</td>
 <td class="org-left">170 + 130</td>
-<td class="org-left">157 + 167</td>
+<td class="org-left"><b>157</b> + 167</td>
 <td class="org-left">904 (495 + 409)</td>
 <td class="org-right">3451074</td>
 </tr>
@@ -243,9 +327,19 @@ The following results correspond to Table 1 in the paper, with some additional r
 <td class="org-left">&#xa0;</td>
 <td class="org-left">168 + 112</td>
 <td class="org-left">170 + 130</td>
-<td class="org-left">157 + 167</td>
+<td class="org-left"><b>157</b> + 167</td>
 <td class="org-left">904 (495 + 409)</td>
 <td class="org-right">3451445</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">VBS</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
 </tr>
 </tbody>
 </table>
@@ -260,17 +354,17 @@ The following CSV file contains all results summarized in the above Table.
 </div>
 </div>
 
-<div id="outline-container-orgea2682e" class="outline-2">
-<h2 id="orgea2682e">CDF Plots</h2>
-<div class="outline-text-2" id="text-orgea2682e">
+<div id="outline-container-org6f60a57" class="outline-2">
+<h2 id="org6f60a57">CDF Plots</h2>
+<div class="outline-text-2" id="text-org6f60a57">
 <p>
 The followings are interactive graphs described in the paper, with some additional graphs.
 </p>
 </div>
 
-<div id="outline-container-org3bf5320" class="outline-3">
-<h3 id="org3bf5320">Runtime (Fig.3)</h3>
-<div class="outline-text-3" id="text-org3bf5320">
+<div id="outline-container-orgc9289ec" class="outline-3">
+<h3 id="orgc9289ec">Runtime (Fig.3)</h3>
+<div class="outline-text-3" id="text-orgc9289ec">
 <ul class="org-ul">
 <li><a href="fig-cdf-sat+unsat.html">All instances</a></li>
 <li><a href="fig-cdf-sat.html">SAT instances</a></li>
@@ -278,17 +372,17 @@ The followings are interactive graphs described in the paper, with some addition
 </ul>
 </div>
 </div>
-<div id="outline-container-org5e673a5" class="outline-3">
-<h3 id="org5e673a5">Waiting time ratio (Fig.4)</h3>
-<div class="outline-text-3" id="text-org5e673a5">
+<div id="outline-container-org617f561" class="outline-3">
+<h3 id="org617f561">Waiting time ratio (Fig.4)</h3>
+<div class="outline-text-3" id="text-org617f561">
 <ul class="org-ul">
 <li><a href="fig-waiting-time-ratio.html">Waiting time ratio</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6731155" class="outline-3">
-<h3 id="org6731155">Propagation speed</h3>
-<div class="outline-text-3" id="text-org6731155">
+<div id="outline-container-orga9769e2" class="outline-3">
+<h3 id="orga9769e2">Propagation speed</h3>
+<div class="outline-text-3" id="text-orga9769e2">
 <p>
 The following graph shows the propagation speed (number of literals
 propagated per second; averaged for each worker per instance) in our
@@ -300,9 +394,9 @@ parallel SAT solvers.
 </div>
 </div>
 </div>
-<div id="outline-container-orga5e39d2" class="outline-2">
-<h2 id="orga5e39d2">Comparison of two solvers</h2>
-<div class="outline-text-2" id="text-orga5e39d2">
+<div id="outline-container-orgb934976" class="outline-2">
+<h2 id="orgb934976">Comparison of two solvers</h2>
+<div class="outline-text-2" id="text-orgb934976">
 <ul class="org-ul">
 <li><a href="fig-ManySAT-vs-DPS-MiniSAT.html">ManySAT vs. DPS-MiniSAT</a></li>
 <li><a href="fig-Glucose-syrup-vs-DPS-Glucose.html">Glucose-syrup vs. DPS-Glucose</a></li>
@@ -311,9 +405,9 @@ parallel SAT solvers.
 </ul>
 </div>
 </div>
-<div id="outline-container-org24cd6c4" class="outline-2">
-<h2 id="org24cd6c4">Comparison of best and worst cases</h2>
-<div class="outline-text-2" id="text-org24cd6c4">
+<div id="outline-container-orgd8689fb" class="outline-2">
+<h2 id="orgd8689fb">Comparison of best and worst cases</h2>
+<div class="outline-text-2" id="text-orgd8689fb">
 <ul class="org-ul">
 <li><a href="fig-Painless-MCOMSPS-best-vs-Painless-MCOMSPS-worst.html">Painless-MapleCOMSPS-best vs. Painless-MapleCOMSPS-worst</a></li>
 <li><a href="fig-DPS-Kissat-non-det-best-vs-DPS-Kissat-non-det-worst.html">DPS-Kissat-non-det-best vs. DPS-Kissat-non-det-worst</a> (Fig.5 (a))</li>
@@ -324,7 +418,7 @@ parallel SAT solvers.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Hidetomo Nabeshima</p>
-<p class="date">Created: 2022-05-20 金 12:56</p>
+<p class="date">Created: 2022-05-22 日 22:57</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

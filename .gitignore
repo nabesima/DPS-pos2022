@@ -3,9 +3,9 @@
 /Release
 /Debug
 /instances
+/docs/org-macros.setup
 .vscode/
 /DPS.code-workspace
-/kissat/*/tmp
 
 # excluded files
 DPS
@@ -16,7 +16,5 @@ depend.mk
 *.od
 *.op
 *.old
-org-mac
 *.org
 *~
-org-macros.setup
