@@ -3,18 +3,18 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-23 月 14:43 -->
+<!-- 2022-05-25 水 13:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>DPS: A Framework for Deterministic Parallel SAT Solvers</title>
 <meta name="author" content="Hidetomo Nabeshima" />
 <meta name="generator" content="Org Mode" />
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/readtheorg.css"/>
+<script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
@@ -24,17 +24,17 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb774dfb"># of Solved Instances</a></li>
-<li><a href="#orgc70033d">CDF Plots</a>
+<li><a href="#org7e7cbfc"># of Solved Instances</a></li>
+<li><a href="#org4d82b17">CDF Plots</a>
 <ul>
-<li><a href="#org6aff5da">Runtime (Fig.3)</a></li>
-<li><a href="#orgda37142">Waiting time ratio (Fig.4)</a></li>
-<li><a href="#orgbf81c60">Propagation speed</a></li>
-<li><a href="#orgf2b9170">Period speed</a></li>
+<li><a href="#orge5eb1bc">Runtime (Fig.3)</a></li>
+<li><a href="#org54d51f1">Waiting time ratio (Fig.4)</a></li>
+<li><a href="#org22f0f2c">Propagation speed</a></li>
+<li><a href="#orge4ee214">Period speed</a></li>
 </ul>
 </li>
-<li><a href="#org7ec8436">Comparison of two solvers</a></li>
-<li><a href="#orgacb3acf">Comparison of best and worst cases</a></li>
+<li><a href="#org522178e">Comparison of two solvers</a></li>
+<li><a href="#org9c6f5f2">Comparison of best and worst cases</a></li>
 </ul>
 </div>
 </div>
@@ -47,9 +47,9 @@ Hidetomo Nabeshima, Tsubasa Fukiage, Yuto Obitsu, Xiao-Nan Lu and Katsumi Inoue:
 </p>
 </blockquote>
 
-<div id="outline-container-orgb774dfb" class="outline-2">
-<h2 id="orgb774dfb"># of Solved Instances</h2>
-<div class="outline-text-2" id="text-orgb774dfb">
+<div id="outline-container-org7e7cbfc" class="outline-2">
+<h2 id="org7e7cbfc"># of Solved Instances</h2>
+<div class="outline-text-2" id="text-org7e7cbfc">
 <p>
 The following results correspond to Table 1 in the paper, with some additional results.
 </p>
@@ -147,7 +147,7 @@ The following results correspond to Table 1 in the paper, with some additional r
 </tr>
 
 <tr>
-<td class="org-left">DPS-MiniSAT-non-det (added)</td>
+<td class="org-left">NPS-MiniSAT (added)</td>
 <td class="org-left">152 + 84</td>
 <td class="org-left">113 + 111</td>
 <td class="org-left">131 + 130</td>
@@ -175,7 +175,7 @@ The following results correspond to Table 1 in the paper, with some additional r
 </tr>
 
 <tr>
-<td class="org-left">DPS-Glucose-non-det (added)</td>
+<td class="org-left">NPS-Glucose (added)</td>
 <td class="org-left">144 + 106</td>
 <td class="org-left">108 + 124</td>
 <td class="org-left">133 + 165</td>
@@ -203,7 +203,7 @@ The following results correspond to Table 1 in the paper, with some additional r
 </tr>
 
 <tr>
-<td class="org-left">DPS-MCOMSPS-non-det</td>
+<td class="org-left">NPS-MCOMSPS</td>
 <td class="org-left">159 + 104</td>
 <td class="org-left">140 + 121</td>
 <td class="org-left">137 + <b>168</b></td>
@@ -231,7 +231,7 @@ The following results correspond to Table 1 in the paper, with some additional r
 </tr>
 
 <tr>
-<td class="org-left">DPS-Kissat-non-det</td>
+<td class="org-left">NPS-Kissat</td>
 <td class="org-left">173 + 114</td>
 <td class="org-left">175 + <b>134</b></td>
 <td class="org-left">155 + <b>168</b></td>
@@ -355,17 +355,17 @@ The following CSV file contains all results summarized in the above Table.
 </div>
 </div>
 
-<div id="outline-container-orgc70033d" class="outline-2">
-<h2 id="orgc70033d">CDF Plots</h2>
-<div class="outline-text-2" id="text-orgc70033d">
+<div id="outline-container-org4d82b17" class="outline-2">
+<h2 id="org4d82b17">CDF Plots</h2>
+<div class="outline-text-2" id="text-org4d82b17">
 <p>
 The followings are interactive graphs described in the paper, with some additional graphs.
 </p>
 </div>
 
-<div id="outline-container-org6aff5da" class="outline-3">
-<h3 id="org6aff5da">Runtime (Fig.3)</h3>
-<div class="outline-text-3" id="text-org6aff5da">
+<div id="outline-container-orge5eb1bc" class="outline-3">
+<h3 id="orge5eb1bc">Runtime (Fig.3)</h3>
+<div class="outline-text-3" id="text-orge5eb1bc">
 <ul class="org-ul">
 <li><a href="fig-cdf-sat+unsat.html">All instances</a></li>
 <li><a href="fig-cdf-sat.html">SAT instances</a></li>
@@ -373,17 +373,17 @@ The followings are interactive graphs described in the paper, with some addition
 </ul>
 </div>
 </div>
-<div id="outline-container-orgda37142" class="outline-3">
-<h3 id="orgda37142">Waiting time ratio (Fig.4)</h3>
-<div class="outline-text-3" id="text-orgda37142">
+<div id="outline-container-org54d51f1" class="outline-3">
+<h3 id="org54d51f1">Waiting time ratio (Fig.4)</h3>
+<div class="outline-text-3" id="text-org54d51f1">
 <ul class="org-ul">
 <li><a href="fig-waiting-time-ratio.html">Waiting time ratio</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbf81c60" class="outline-3">
-<h3 id="orgbf81c60">Propagation speed</h3>
-<div class="outline-text-3" id="text-orgbf81c60">
+<div id="outline-container-org22f0f2c" class="outline-3">
+<h3 id="org22f0f2c">Propagation speed</h3>
+<div class="outline-text-3" id="text-org22f0f2c">
 <p>
 The following graph shows the propagation speed (number of literals
 propagated per second; averaged for each worker per instance) in our
@@ -394,9 +394,9 @@ parallel SAT solvers.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf2b9170" class="outline-3">
-<h3 id="orgf2b9170">Period speed</h3>
-<div class="outline-text-3" id="text-orgf2b9170">
+<div id="outline-container-orge4ee214" class="outline-3">
+<h3 id="orge4ee214">Period speed</h3>
+<div class="outline-text-3" id="text-orge4ee214">
 <p>
 The following graph shows the period speed (number of periods per
 second; averaged for each worker per instance) in our parallel SAT
@@ -408,29 +408,29 @@ solvers.
 </div>
 </div>
 </div>
-<div id="outline-container-org7ec8436" class="outline-2">
-<h2 id="org7ec8436">Comparison of two solvers</h2>
-<div class="outline-text-2" id="text-org7ec8436">
+<div id="outline-container-org522178e" class="outline-2">
+<h2 id="org522178e">Comparison of two solvers</h2>
+<div class="outline-text-2" id="text-org522178e">
 <ul class="org-ul">
 <li><a href="fig-ManySAT-vs-DPS-MiniSAT.html">ManySAT vs. DPS-MiniSAT</a></li>
 <li><a href="fig-Glucose-syrup-vs-DPS-Glucose.html">Glucose-syrup vs. DPS-Glucose</a></li>
 <li><a href="fig-ManyGlucose-lit-vs-DPS-Glucose.html">ManyGlucose-lit vs. DPS-Glucose</a></li>
 <li><a href="fig-ManyGlucose-blk-vs-DPS-Glucose.html">ManyGlucose-blk vs. DPS-Glucose</a></li>
 <li><a href="fig-Painless-MCOMSPS-vs-DPS-MCOMSPS.html">Painless-MapleCOMSPS vs. DPS-MapleCOMSPS</a></li>
-<li><a href="fig-DPS-Kissat-vs-DPS-Kissat-non-det.html">DPS-Kissat-non-det vs. DPS-Kissat</a> (Fig.6)</li>
+<li><a href="fig-DPS-Kissat-vs-NPS-Kissat.html">NPS-Kissat vs. DPS-Kissat</a> (Fig.6)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgacb3acf" class="outline-2">
-<h2 id="orgacb3acf">Comparison of best and worst cases</h2>
-<div class="outline-text-2" id="text-orgacb3acf">
+<div id="outline-container-org9c6f5f2" class="outline-2">
+<h2 id="org9c6f5f2">Comparison of best and worst cases</h2>
+<div class="outline-text-2" id="text-org9c6f5f2">
 <ul class="org-ul">
 <li><a href="fig-Glucose-syrup-best-vs-Glucose-syrup-worst.html">Glucose-syrup-best vs. Glucose-syrup-worst</a></li>
 <li><a href="fig-Painless-MCOMSPS-best-vs-Painless-MCOMSPS-worst.html">Painless-MapleCOMSPS-best vs. Painless-MapleCOMSPS-worst</a></li>
-<li><a href="fig-DPS-MiniSAT-non-det-best-vs-DPS-MiniSAT-non-det-worst.html">DPS-MiniSAT-non-det-best vs. DPS-MiniSAT-non-det-worst</a></li>
-<li><a href="fig-DPS-Glucose-non-det-best-vs-DPS-Glucose-non-det-worst.html">DPS-Glucose-non-det-best vs. DPS-Glucose-non-det-worst</a></li>
-<li><a href="fig-DPS-MCOMSPS-non-det-best-vs-DPS-MCOMSPS-non-det-worst.html">DPS-MCOMSPS-non-det-best vs. DPS-MCOMSPS-non-det-worst</a></li>
-<li><a href="fig-DPS-Kissat-non-det-best-vs-DPS-Kissat-non-det-worst.html">DPS-Kissat-non-det-best vs. DPS-Kissat-non-det-worst</a> (Fig.5 (a))</li>
+<li><a href="fig-NPS-MiniSAT-best-vs-NPS-MiniSAT-worst.html">NPS-MiniSAT-best vs. NPS-MiniSAT-worst</a></li>
+<li><a href="fig-NPS-Glucose-best-vs-NPS-Glucose-worst.html">NPS-Glucose-best vs. NPS-Glucose-worst</a></li>
+<li><a href="fig-NPS-MCOMSPS-best-vs-NPS-MCOMSPS-worst.html">NPS-MCOMSPS-best vs. NPS-MCOMSPS-worst</a></li>
+<li><a href="fig-NPS-Kissat-best-vs-NPS-Kissat-worst.html">NPS-Kissat-best vs. NPS-Kissat-worst</a> (Fig.5 (a))</li>
 <li><a href="fig-DPS-Kissat-best-vs-DPS-Kissat-worst.html">DPS-Kissat-best vs. DPS-Kissat-worst</a> (Fig.5 (b))</li>
 </ul>
 </div>
@@ -438,7 +438,7 @@ solvers.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Hidetomo Nabeshima</p>
-<p class="date">Created: 2022-05-23 月 14:43</p>
+<p class="date">Created: 2022-05-25 水 13:35</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
