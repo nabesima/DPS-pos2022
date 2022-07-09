@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-07-09 土 15:14 -->
+<!-- 2022-07-09 土 15:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>DPS: A Framework for Deterministic Parallel SAT Solvers</title>
@@ -24,17 +24,17 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org6a530cd"># of Solved Instances</a></li>
-<li><a href="#org9270017">CDF Plots</a>
+<li><a href="#orgb4a5f1e"># of Solved Instances</a></li>
+<li><a href="#org26d8168">CDF Plots</a>
 <ul>
-<li><a href="#org57b8ec0">Runtime (Fig.3)</a></li>
-<li><a href="#org8a20460">Waiting time ratio (Fig.4)</a></li>
-<li><a href="#org8d6668e">Propagation speed</a></li>
-<li><a href="#org0003478">Period speed</a></li>
+<li><a href="#org242480a">Runtime (Fig.3)</a></li>
+<li><a href="#org0088953">Waiting time ratio (Fig.4)</a></li>
+<li><a href="#orgbe92d99">Propagation speed</a></li>
+<li><a href="#org4d0336e">Period speed</a></li>
 </ul>
 </li>
-<li><a href="#org8351ec7">Comparison of two solvers</a></li>
-<li><a href="#org59fabc4">Comparison of best and worst cases</a></li>
+<li><a href="#org06a1ea7">Comparison of two solvers</a></li>
+<li><a href="#org7874d3d">Comparison of best and worst cases</a></li>
 </ul>
 </div>
 </div>
@@ -43,13 +43,13 @@ This page provides the supplemental materials of the following paper:
 </p>
 <blockquote>
 <p>
-Hidetomo Nabeshima, Tsubasa Fukiage, Yuto Obitsu, Xiao-Nan Lu and Katsumi Inoue: DPS: A Framework for Deterministic Parallel SAT Solvers, submitted to POS-2022.
+Hidetomo Nabeshima, Tsubasa Fukiage, Yuto Obitsu, Xiao-Nan Lu and Katsumi Inoue: DPS: A Framework for Deterministic Parallel SAT Solvers, to be appeared in POS-2022.
 </p>
 </blockquote>
 
-<div id="outline-container-org6a530cd" class="outline-2">
-<h2 id="org6a530cd"># of Solved Instances</h2>
-<div class="outline-text-2" id="text-org6a530cd">
+<div id="outline-container-orgb4a5f1e" class="outline-2">
+<h2 id="orgb4a5f1e"># of Solved Instances</h2>
+<div class="outline-text-2" id="text-orgb4a5f1e">
 <p>
 The following results correspond to Table 1 in the paper, with some additional results.
 </p>
@@ -382,17 +382,17 @@ The following CSV file contains all results summarized in the above Table.
 </div>
 </div>
 
-<div id="outline-container-org9270017" class="outline-2">
-<h2 id="org9270017">CDF Plots</h2>
-<div class="outline-text-2" id="text-org9270017">
+<div id="outline-container-org26d8168" class="outline-2">
+<h2 id="org26d8168">CDF Plots</h2>
+<div class="outline-text-2" id="text-org26d8168">
 <p>
 The followings are interactive graphs described in the paper, with some additional graphs.
 </p>
 </div>
 
-<div id="outline-container-org57b8ec0" class="outline-3">
-<h3 id="org57b8ec0">Runtime (Fig.3)</h3>
-<div class="outline-text-3" id="text-org57b8ec0">
+<div id="outline-container-org242480a" class="outline-3">
+<h3 id="org242480a">Runtime (Fig.3)</h3>
+<div class="outline-text-3" id="text-org242480a">
 <ul class="org-ul">
 <li><a href="fig-cdf-sat+unsat.html">All instances</a></li>
 <li><a href="fig-cdf-sat.html">SAT instances</a></li>
@@ -400,17 +400,17 @@ The followings are interactive graphs described in the paper, with some addition
 </ul>
 </div>
 </div>
-<div id="outline-container-org8a20460" class="outline-3">
-<h3 id="org8a20460">Waiting time ratio (Fig.4)</h3>
-<div class="outline-text-3" id="text-org8a20460">
+<div id="outline-container-org0088953" class="outline-3">
+<h3 id="org0088953">Waiting time ratio (Fig.4)</h3>
+<div class="outline-text-3" id="text-org0088953">
 <ul class="org-ul">
 <li><a href="fig-waiting-time-ratio.html">Waiting time ratio</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8d6668e" class="outline-3">
-<h3 id="org8d6668e">Propagation speed</h3>
-<div class="outline-text-3" id="text-org8d6668e">
+<div id="outline-container-orgbe92d99" class="outline-3">
+<h3 id="orgbe92d99">Propagation speed</h3>
+<div class="outline-text-3" id="text-orgbe92d99">
 <p>
 The following graph shows the propagation speed (number of literals
 propagated per second; averaged for each worker per instance) in our
@@ -421,9 +421,9 @@ parallel SAT solvers.
 </ul>
 </div>
 </div>
-<div id="outline-container-org0003478" class="outline-3">
-<h3 id="org0003478">Period speed</h3>
-<div class="outline-text-3" id="text-org0003478">
+<div id="outline-container-org4d0336e" class="outline-3">
+<h3 id="org4d0336e">Period speed</h3>
+<div class="outline-text-3" id="text-org4d0336e">
 <p>
 The following graph shows the period speed (number of periods per
 second; averaged for each worker per instance) in our parallel SAT
@@ -435,9 +435,9 @@ solvers.
 </div>
 </div>
 </div>
-<div id="outline-container-org8351ec7" class="outline-2">
-<h2 id="org8351ec7">Comparison of two solvers</h2>
-<div class="outline-text-2" id="text-org8351ec7">
+<div id="outline-container-org06a1ea7" class="outline-2">
+<h2 id="org06a1ea7">Comparison of two solvers</h2>
+<div class="outline-text-2" id="text-org06a1ea7">
 <ul class="org-ul">
 <li><a href="fig-ManySAT-vs-DPS-MiniSAT.html">ManySAT vs. DPS-MiniSAT</a></li>
 <li><a href="fig-Glucose-syrup-vs-DPS-Glucose.html">Glucose-syrup vs. DPS-Glucose</a></li>
@@ -451,9 +451,9 @@ solvers.
 </ul>
 </div>
 </div>
-<div id="outline-container-org59fabc4" class="outline-2">
-<h2 id="org59fabc4">Comparison of best and worst cases</h2>
-<div class="outline-text-2" id="text-org59fabc4">
+<div id="outline-container-org7874d3d" class="outline-2">
+<h2 id="org7874d3d">Comparison of best and worst cases</h2>
+<div class="outline-text-2" id="text-org7874d3d">
 <ul class="org-ul">
 <li><a href="fig-Glucose-syrup-best-vs-Glucose-syrup-worst.html">Glucose-syrup-best vs. Glucose-syrup-worst</a></li>
 <li><a href="fig-Painless-MCOMSPS-best-vs-Painless-MCOMSPS-worst.html">Painless-MapleCOMSPS-best vs. Painless-MapleCOMSPS-worst</a></li>
@@ -468,7 +468,7 @@ solvers.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Hidetomo Nabeshima</p>
-<p class="date">Created: 2022-07-09 土 15:14</p>
+<p class="date">Created: 2022-07-09 土 15:17</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
