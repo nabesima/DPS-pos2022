@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-25 水 13:35 -->
+<!-- 2022-07-09 土 15:14 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>DPS: A Framework for Deterministic Parallel SAT Solvers</title>
@@ -24,17 +24,17 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org7e7cbfc"># of Solved Instances</a></li>
-<li><a href="#org4d82b17">CDF Plots</a>
+<li><a href="#org6a530cd"># of Solved Instances</a></li>
+<li><a href="#org9270017">CDF Plots</a>
 <ul>
-<li><a href="#orge5eb1bc">Runtime (Fig.3)</a></li>
-<li><a href="#org54d51f1">Waiting time ratio (Fig.4)</a></li>
-<li><a href="#org22f0f2c">Propagation speed</a></li>
-<li><a href="#orge4ee214">Period speed</a></li>
+<li><a href="#org57b8ec0">Runtime (Fig.3)</a></li>
+<li><a href="#org8a20460">Waiting time ratio (Fig.4)</a></li>
+<li><a href="#org8d6668e">Propagation speed</a></li>
+<li><a href="#org0003478">Period speed</a></li>
 </ul>
 </li>
-<li><a href="#org522178e">Comparison of two solvers</a></li>
-<li><a href="#org9c6f5f2">Comparison of best and worst cases</a></li>
+<li><a href="#org8351ec7">Comparison of two solvers</a></li>
+<li><a href="#org59fabc4">Comparison of best and worst cases</a></li>
 </ul>
 </div>
 </div>
@@ -47,9 +47,9 @@ Hidetomo Nabeshima, Tsubasa Fukiage, Yuto Obitsu, Xiao-Nan Lu and Katsumi Inoue:
 </p>
 </blockquote>
 
-<div id="outline-container-org7e7cbfc" class="outline-2">
-<h2 id="org7e7cbfc"># of Solved Instances</h2>
-<div class="outline-text-2" id="text-org7e7cbfc">
+<div id="outline-container-org6a530cd" class="outline-2">
+<h2 id="org6a530cd"># of Solved Instances</h2>
+<div class="outline-text-2" id="text-org6a530cd">
 <p>
 The following results correspond to Table 1 in the paper, with some additional results.
 </p>
@@ -335,16 +335,43 @@ The following results correspond to Table 1 in the paper, with some additional r
 </tbody>
 <tbody>
 <tr>
+<td class="org-left">DPS-Kissat no-elim (added)</td>
+<td class="org-left">166 + 113</td>
+<td class="org-left">176 + 131</td>
+<td class="org-left">153 + 167</td>
+<td class="org-left">906 (495 + 411)</td>
+<td class="org-right">3417151</td>
+</tr>
+
+<tr>
+<td class="org-left">DPS-Kissat elim (added)</td>
+<td class="org-left">168 + 111</td>
+<td class="org-left">173 + 131</td>
+<td class="org-left">153 + 161</td>
+<td class="org-left">897 (494 + 403)</td>
+<td class="org-right">3524412</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
 <td class="org-left">VBS</td>
 <td class="org-left">181 + 120</td>
-<td class="org-left">185 + 139</td>
+<td class="org-left">187 + 140</td>
 <td class="org-left">159 + 176</td>
-<td class="org-left">960 (525 + 435)</td>
+<td class="org-left">963 (527 + 436)</td>
 <td class="org-right">2713047</td>
 </tr>
 </tbody>
 </table>
 
+<ul class="org-ul">
+<li>NPS-MiniSAT and NPS-Glucose results have been added.</li>
+<li>In DPS-Kissat, half of the workers disabled the Kissat elimination
+technique by default. We have added the results when all workers used
+the elimination (DPS-Kissat-elim) and when it was not used
+(DPS-Kissat-no-elim). The effect of the elimination technique
+depends on the given instances. See <a href="fig-DPS-Kissat-elim-vs-DPS-Kissat-no-elim.html">DPS-Kissat-elim vs. DPS-Kissat-no-elim</a>.</li>
+</ul>
 
 <p>
 The following CSV file contains all results summarized in the above Table.
@@ -355,17 +382,17 @@ The following CSV file contains all results summarized in the above Table.
 </div>
 </div>
 
-<div id="outline-container-org4d82b17" class="outline-2">
-<h2 id="org4d82b17">CDF Plots</h2>
-<div class="outline-text-2" id="text-org4d82b17">
+<div id="outline-container-org9270017" class="outline-2">
+<h2 id="org9270017">CDF Plots</h2>
+<div class="outline-text-2" id="text-org9270017">
 <p>
 The followings are interactive graphs described in the paper, with some additional graphs.
 </p>
 </div>
 
-<div id="outline-container-orge5eb1bc" class="outline-3">
-<h3 id="orge5eb1bc">Runtime (Fig.3)</h3>
-<div class="outline-text-3" id="text-orge5eb1bc">
+<div id="outline-container-org57b8ec0" class="outline-3">
+<h3 id="org57b8ec0">Runtime (Fig.3)</h3>
+<div class="outline-text-3" id="text-org57b8ec0">
 <ul class="org-ul">
 <li><a href="fig-cdf-sat+unsat.html">All instances</a></li>
 <li><a href="fig-cdf-sat.html">SAT instances</a></li>
@@ -373,17 +400,17 @@ The followings are interactive graphs described in the paper, with some addition
 </ul>
 </div>
 </div>
-<div id="outline-container-org54d51f1" class="outline-3">
-<h3 id="org54d51f1">Waiting time ratio (Fig.4)</h3>
-<div class="outline-text-3" id="text-org54d51f1">
+<div id="outline-container-org8a20460" class="outline-3">
+<h3 id="org8a20460">Waiting time ratio (Fig.4)</h3>
+<div class="outline-text-3" id="text-org8a20460">
 <ul class="org-ul">
 <li><a href="fig-waiting-time-ratio.html">Waiting time ratio</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org22f0f2c" class="outline-3">
-<h3 id="org22f0f2c">Propagation speed</h3>
-<div class="outline-text-3" id="text-org22f0f2c">
+<div id="outline-container-org8d6668e" class="outline-3">
+<h3 id="org8d6668e">Propagation speed</h3>
+<div class="outline-text-3" id="text-org8d6668e">
 <p>
 The following graph shows the propagation speed (number of literals
 propagated per second; averaged for each worker per instance) in our
@@ -394,9 +421,9 @@ parallel SAT solvers.
 </ul>
 </div>
 </div>
-<div id="outline-container-orge4ee214" class="outline-3">
-<h3 id="orge4ee214">Period speed</h3>
-<div class="outline-text-3" id="text-orge4ee214">
+<div id="outline-container-org0003478" class="outline-3">
+<h3 id="org0003478">Period speed</h3>
+<div class="outline-text-3" id="text-org0003478">
 <p>
 The following graph shows the period speed (number of periods per
 second; averaged for each worker per instance) in our parallel SAT
@@ -408,9 +435,9 @@ solvers.
 </div>
 </div>
 </div>
-<div id="outline-container-org522178e" class="outline-2">
-<h2 id="org522178e">Comparison of two solvers</h2>
-<div class="outline-text-2" id="text-org522178e">
+<div id="outline-container-org8351ec7" class="outline-2">
+<h2 id="org8351ec7">Comparison of two solvers</h2>
+<div class="outline-text-2" id="text-org8351ec7">
 <ul class="org-ul">
 <li><a href="fig-ManySAT-vs-DPS-MiniSAT.html">ManySAT vs. DPS-MiniSAT</a></li>
 <li><a href="fig-Glucose-syrup-vs-DPS-Glucose.html">Glucose-syrup vs. DPS-Glucose</a></li>
@@ -418,12 +445,15 @@ solvers.
 <li><a href="fig-ManyGlucose-blk-vs-DPS-Glucose.html">ManyGlucose-blk vs. DPS-Glucose</a></li>
 <li><a href="fig-Painless-MCOMSPS-vs-DPS-MCOMSPS.html">Painless-MapleCOMSPS vs. DPS-MapleCOMSPS</a></li>
 <li><a href="fig-DPS-Kissat-vs-NPS-Kissat.html">NPS-Kissat vs. DPS-Kissat</a> (Fig.6)</li>
+<li><a href="fig-DPS-Kissat-vs-DPS-Kissat-no-elim.html">DPS-Kissat vs. DPS-Kissat-no-elim</a></li>
+<li><a href="fig-DPS-Kissat-vs-DPS-Kissat-elim.html">DPS-Kissat vs. DPS-Kissat-elim</a></li>
+<li><a href="fig-DPS-Kissat-elim-vs-DPS-Kissat-no-elim.html">DPS-Kissat-elim vs. DPS-Kissat-no-elim</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9c6f5f2" class="outline-2">
-<h2 id="org9c6f5f2">Comparison of best and worst cases</h2>
-<div class="outline-text-2" id="text-org9c6f5f2">
+<div id="outline-container-org59fabc4" class="outline-2">
+<h2 id="org59fabc4">Comparison of best and worst cases</h2>
+<div class="outline-text-2" id="text-org59fabc4">
 <ul class="org-ul">
 <li><a href="fig-Glucose-syrup-best-vs-Glucose-syrup-worst.html">Glucose-syrup-best vs. Glucose-syrup-worst</a></li>
 <li><a href="fig-Painless-MCOMSPS-best-vs-Painless-MCOMSPS-worst.html">Painless-MapleCOMSPS-best vs. Painless-MapleCOMSPS-worst</a></li>
@@ -438,7 +468,7 @@ solvers.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Hidetomo Nabeshima</p>
-<p class="date">Created: 2022-05-25 水 13:35</p>
+<p class="date">Created: 2022-07-09 土 15:14</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
