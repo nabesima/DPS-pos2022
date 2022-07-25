@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-07-19 火 21:12 -->
+<!-- 2022-07-25 月 15:05 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>DPS: A Framework for Deterministic Parallel SAT Solvers</title>
@@ -24,17 +24,18 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga15e50f"># of Solved Instances</a></li>
-<li><a href="#org8659d69">Waiting time ratio</a></li>
-<li><a href="#org145edc3">CDF Plots</a>
+<li><a href="#org0d68f72"># of Solved Instances</a></li>
+<li><a href="#orge6cea52">Waiting time ratio</a></li>
+<li><a href="#org832cfa0">Exchanging time ratio</a></li>
+<li><a href="#org1d38de0">CDF Plots</a>
 <ul>
-<li><a href="#org3031d24">Runtime (Fig.3)</a></li>
-<li><a href="#org45d9348">Propagation speed</a></li>
-<li><a href="#orgfdd10d1">Period speed</a></li>
+<li><a href="#org1d030e9">Runtime (Fig.3)</a></li>
+<li><a href="#orgdf33e8b">Propagation speed</a></li>
+<li><a href="#orgda88031">Period speed</a></li>
 </ul>
 </li>
-<li><a href="#org5638b95">Comparison of two solvers</a></li>
-<li><a href="#org517dad8">Comparison of best and worst cases</a></li>
+<li><a href="#orgdabe698">Comparison of two solvers</a></li>
+<li><a href="#orgab0ff2b">Comparison of best and worst cases</a></li>
 </ul>
 </div>
 </div>
@@ -47,9 +48,9 @@ Hidetomo Nabeshima, Tsubasa Fukiage, Yuto Obitsu, Xiao-Nan Lu and Katsumi Inoue:
 </p>
 </blockquote>
 
-<div id="outline-container-orga15e50f" class="outline-2">
-<h2 id="orga15e50f"># of Solved Instances</h2>
-<div class="outline-text-2" id="text-orga15e50f">
+<div id="outline-container-org0d68f72" class="outline-2">
+<h2 id="org0d68f72"># of Solved Instances</h2>
+<div class="outline-text-2" id="text-org0d68f72">
 <p>
 The following results correspond to Table 1 in the paper, with some additional results.
 </p>
@@ -404,9 +405,9 @@ The following CSV file contains all results summarized in the above Table.
 </div>
 </div>
 
-<div id="outline-container-org8659d69" class="outline-2">
-<h2 id="org8659d69">Waiting time ratio</h2>
-<div class="outline-text-2" id="text-org8659d69">
+<div id="outline-container-orge6cea52" class="outline-2">
+<h2 id="orge6cea52">Waiting time ratio</h2>
+<div class="outline-text-2" id="text-orge6cea52">
 <p>
 The following results correspond to Table 2 in the paper, with some additional results.
 </p>
@@ -487,17 +488,95 @@ The following results correspond to Table 2 in the paper, with some additional r
 </div>
 </div>
 
-<div id="outline-container-org145edc3" class="outline-2">
-<h2 id="org145edc3">CDF Plots</h2>
-<div class="outline-text-2" id="text-org145edc3">
+<div id="outline-container-org832cfa0" class="outline-2">
+<h2 id="org832cfa0">Exchanging time ratio</h2>
+<div class="outline-text-2" id="text-org832cfa0">
+<p>
+The following results show the clause exchaning time ratio.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Solver</th>
+<th scope="col" class="org-right">Exchaning time ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">ManySAT</td>
+<td class="org-right">1.8%</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">ManyGlucose-lit</td>
+<td class="org-right">0.7%</td>
+</tr>
+
+<tr>
+<td class="org-left">ManyGlucose-blk</td>
+<td class="org-right">0.7%</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">DPS-MiniSAT</td>
+<td class="org-right">0.3%</td>
+</tr>
+
+<tr>
+<td class="org-left">DPS-Glucose</td>
+<td class="org-right">0.4%</td>
+</tr>
+
+<tr>
+<td class="org-left">DPS-MCOMSPS</td>
+<td class="org-right">0.3%</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">DPS-Kissat</td>
+<td class="org-right">0.3%</td>
+</tr>
+
+<tr>
+<td class="org-left">DPS-Kissat no-elim</td>
+<td class="org-right">0.6%</td>
+</tr>
+
+<tr>
+<td class="org-left">DPS-Kissat elim</td>
+<td class="org-right">0.5%</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li><a href="fig-exchanging-time-ratio.html">Exchanging time ratio</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1d38de0" class="outline-2">
+<h2 id="org1d38de0">CDF Plots</h2>
+<div class="outline-text-2" id="text-org1d38de0">
 <p>
 The followings are interactive graphs described in the paper, with some additional graphs.
 </p>
 </div>
 
-<div id="outline-container-org3031d24" class="outline-3">
-<h3 id="org3031d24">Runtime (Fig.3)</h3>
-<div class="outline-text-3" id="text-org3031d24">
+<div id="outline-container-org1d030e9" class="outline-3">
+<h3 id="org1d030e9">Runtime (Fig.3)</h3>
+<div class="outline-text-3" id="text-org1d030e9">
 <ul class="org-ul">
 <li><a href="fig-cdf-sat+unsat.html">All instances</a></li>
 <li><a href="fig-cdf-sat.html">SAT instances</a></li>
@@ -505,9 +584,9 @@ The followings are interactive graphs described in the paper, with some addition
 </ul>
 </div>
 </div>
-<div id="outline-container-org45d9348" class="outline-3">
-<h3 id="org45d9348">Propagation speed</h3>
-<div class="outline-text-3" id="text-org45d9348">
+<div id="outline-container-orgdf33e8b" class="outline-3">
+<h3 id="orgdf33e8b">Propagation speed</h3>
+<div class="outline-text-3" id="text-orgdf33e8b">
 <p>
 The following graph shows the propagation speed (number of literals
 propagated per second; averaged for each worker per instance) in our
@@ -518,9 +597,9 @@ parallel SAT solvers.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfdd10d1" class="outline-3">
-<h3 id="orgfdd10d1">Period speed</h3>
-<div class="outline-text-3" id="text-orgfdd10d1">
+<div id="outline-container-orgda88031" class="outline-3">
+<h3 id="orgda88031">Period speed</h3>
+<div class="outline-text-3" id="text-orgda88031">
 <p>
 The following graph shows the period speed (number of periods per
 second; averaged for each worker per instance) in our parallel SAT
@@ -532,9 +611,9 @@ solvers.
 </div>
 </div>
 </div>
-<div id="outline-container-org5638b95" class="outline-2">
-<h2 id="org5638b95">Comparison of two solvers</h2>
-<div class="outline-text-2" id="text-org5638b95">
+<div id="outline-container-orgdabe698" class="outline-2">
+<h2 id="orgdabe698">Comparison of two solvers</h2>
+<div class="outline-text-2" id="text-orgdabe698">
 <ul class="org-ul">
 <li><a href="fig-ManySAT-vs-DPS-MiniSAT.html">ManySAT vs. DPS-MiniSAT</a></li>
 <li><a href="fig-Glucose-syrup-vs-DPS-Glucose.html">Glucose-syrup vs. DPS-Glucose</a></li>
@@ -550,9 +629,9 @@ solvers.
 </ul>
 </div>
 </div>
-<div id="outline-container-org517dad8" class="outline-2">
-<h2 id="org517dad8">Comparison of best and worst cases</h2>
-<div class="outline-text-2" id="text-org517dad8">
+<div id="outline-container-orgab0ff2b" class="outline-2">
+<h2 id="orgab0ff2b">Comparison of best and worst cases</h2>
+<div class="outline-text-2" id="text-orgab0ff2b">
 <ul class="org-ul">
 <li><a href="fig-Glucose-syrup-best-vs-Glucose-syrup-worst.html">Glucose-syrup-best vs. Glucose-syrup-worst</a></li>
 <li><a href="fig-Painless-MCOMSPS-best-vs-Painless-MCOMSPS-worst.html">Painless-MapleCOMSPS-best vs. Painless-MapleCOMSPS-worst</a></li>
@@ -567,7 +646,7 @@ solvers.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Hidetomo Nabeshima</p>
-<p class="date">Created: 2022-07-19 火 21:12</p>
+<p class="date">Created: 2022-07-25 月 15:05</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
